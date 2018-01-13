@@ -32,11 +32,11 @@ func TxtUpdate(h *Handler, currTime DDate.DTime) {
 	var noholiday = "Today is %s, the %dth day of %s in the YOLD %d."
 	
 	if(currTime.Day % 10 == 1 && currTime.Day != 11) {
-		noholiday = "Today is %s, the %st day of %s in the YOLD %d."
+		noholiday = "Today is %s, the %dst day of %s in the YOLD %d."
 	} else if(currTime.Day % 10 == 2 && currTime.Day != 12) {
-		noholiday = "Today is %s, the %nd day of %s in the YOLD %d."
+		noholiday = "Today is %s, the %dnd day of %s in the YOLD %d."
 	} else if(currTime.Day % 10 == 3 && currTime.Day != 13) {
-		noholiday = "Today is %s, the %rd day of %s in the YOLD %d."
+		noholiday = "Today is %s, the %drd day of %s in the YOLD %d."
 	}
 	
 	var holiday = fmt.Sprintf("%s Celebrate %s", noholiday)
